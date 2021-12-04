@@ -20,6 +20,7 @@
 
 html body{
     min-height: 100vh; 
+    height: auto;
     font-family: 'Kumbh Sans', sans-serif;
     background: linear-gradient(var(--bg-soft-violet),var(--bg-soft-blue));
 
@@ -74,11 +75,21 @@ p{
 }
 
 a{
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
+    cursor: pointer;
     
 }
+
+a:hover{
+    color: var(--txt-Soft-red);
+}
+
+.active{
+    font-weight: bold;
+}
+
 
 .qna-block{
     display: flex;
@@ -86,6 +97,8 @@ a{
     justify-content: space-around;
     text-align: left;
     border-bottom: 1px solid var(--div-light-grayish-blue);
+    margin-top: 1rem;
+    padding-bottom:1rem;
 
 }
 
@@ -93,7 +106,6 @@ a{
     flex: 1 0 80%;
 
 }
-
 
 
 .qna-block img{
@@ -112,19 +124,14 @@ footer{
     margin-bottom: auto;
 }
 
-.invisible{ 
-    display: none;
-}
-
-#p1:target{
+.visible{ 
     display: block;
-
 }
 
-#p2:target{
-    display: block;
-
+.expanded{
+    transform: rotate(180deg);
 }
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
