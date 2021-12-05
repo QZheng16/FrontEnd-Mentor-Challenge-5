@@ -32,11 +32,9 @@ html body{
 }
 
 main{
-    /* min-height: 30rem;
-    height:100%; */
+
     min-width: 20rem;
     position: relative;
-    /* margin-top:auto; */
     width: min(30rem, 80%);
     margin-top: 10rem;
     
@@ -51,7 +49,6 @@ section{
 
 
 picture img{
-  
     top:-6.9rem;
     position: absolute;
     margin-left: auto;
@@ -59,8 +56,6 @@ picture img{
     left: 0;
     right: 0;
     width: 15rem;
-    filter: drop-shadow(0rem 2rem 0px rgba(170, 170, 226, 0.2));
-    
 }
 
 h1{
@@ -102,6 +97,9 @@ a:hover{
 
 }
 
+.box{
+    display: none;
+}
 .question{
     flex: 1 0 80%;
 
@@ -113,6 +111,12 @@ a:hover{
     height: .5rem;
     align-self: center;
 
+}
+
+
+.img-bg{
+    position: absolute;
+    top: .5rem;
 }
 
 .answer{
@@ -135,3 +139,55 @@ footer{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 768px){
+    main{
+        position: relative;
+        width: min(50rem, 80%);
+        overflow: hidden;
+    }
+
+    section{
+        padding: 3rem 5rem 3rem 25rem;
+        
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    picture img{
+        
+        position: absolute;
+        margin-top: 7%;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        margin-left: -5rem;
+        min-width: 25rem;
+    }
+
+    .box{
+        display:block;
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        min-width: 8rem;
+        width: 8rem;
+        top: 3rem;
+        left: 17.5rem;
+        z-index: 1;
+    }
+
+    .img-bg{
+        
+  
+        transform: scale(2);
+        top: -6rem;
+        left: -13rem;
+ 
+    }
+}
