@@ -4,31 +4,39 @@ let idList = document.querySelectorAll('main p');
 
 let imgList = document.querySelectorAll("section img")
 
-console.log(imgList);
+let qnaList = document.querySelectorAll(".qna-block");
+
+console.log(qnaList);
 
 
 
-function toggleAnswer(qList, aList, imgList){
-    console.log(qList);
-    console.log(aList);
+function toggleAnswer(qList, aList, imgList, qnaList){
+
     for(let i = 0; i < qList.length; i++)
     {
-        qList[i].addEventListener("click", ()=> {
-            if(aList[i].classList.contains("visible")){
-                qList[i].classList.remove("active");
-                aList[i].classList.remove("visible"); 
-                imgList[i].classList.remove("expanded");   
-            }else{
-                aList[i].classList.add("visible");
-                qList[i].classList.add("active");
-                imgList[i].classList.add("expanded"); 
-            }
+        qList[i].addEventListener("click", ()=> {  
+                qList[i].classList.toggle("active");
+                
+                imgList[i].classList.toggle("expanded");   
+                  
+                
+                if(aList[i].classList.contains("visible") ===  true)
+                {
+                    setTimeout(() => qnaList[i].classList.remove("anim-height-trans"), 150 );
+                    setTimeout(() => aList[i].classList.remove("visible"), 300 );
+                    
+
+                }
+                else{
+                    aList[i].classList.add("visible"); 
+                    qnaList[i].classList.add("anim-height-trans");   
+                }
         },false);
     }
 }
 
 
 
-toggleAnswer(anchorList, idList, imgList);
+toggleAnswer(anchorList, idList, imgList, qnaList);
 
 

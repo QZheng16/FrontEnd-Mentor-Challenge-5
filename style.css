@@ -38,6 +38,7 @@ main{
     width: min(30rem, 80%);
     margin-top: 10rem;
     
+    
 }
 
 section{
@@ -46,6 +47,7 @@ section{
     padding: 7rem 1rem 3rem;
    
 }
+
 
 
 picture img{
@@ -94,6 +96,15 @@ a:hover{
     border-bottom: 1px solid var(--div-light-grayish-blue);
     margin-top: 1rem;
     padding-bottom:1rem;
+    max-height: 1rem;
+    transition: max-height 250ms ease-out;
+}
+
+.qna-block img{
+    width: .8rem;
+    height: .5rem;
+    align-self: center;
+    
 
 }
 
@@ -106,12 +117,7 @@ a:hover{
 }
 
 
-.qna-block img{
-    width: .8rem;
-    height: .5rem;
-    align-self: center;
 
-}
 
 
 .img-bg{
@@ -120,7 +126,7 @@ a:hover{
 }
 
 .answer{
-    flex: 0 0 80%;
+    flex: 0 0 80%;   
 }
 
 footer{
@@ -137,6 +143,14 @@ footer{
 }
 
 
+.anim-height-trans{
+    max-height: 5rem;
+    
+}
+
+
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -145,7 +159,8 @@ footer{
     main{
         position: relative;
         width: min(50rem, 80%);
-        overflow: hidden;
+
+        
     }
 
     section{
@@ -168,17 +183,14 @@ footer{
         min-width: 25rem;
     }
 
+   
     .box{
         display:block;
         position: absolute;
-        margin-top: auto;
-        margin-bottom: auto;
-        top: 0;
-        bottom: 0;
+        margin-top: 12rem;
         min-width: 8rem;
         width: 8rem;
-        top: 3rem;
-        left: 17.5rem;
+        left: -5.5rem;
         z-index: 1;
     }
 
@@ -190,4 +202,12 @@ footer{
         left: -13rem;
  
     }
+
+    .container{
+        overflow:hidden;
+        position: relative;
+    }
+
+
+ 
 }
