@@ -20,6 +20,7 @@
 
 html body{
     min-height: 100vh; 
+    height: auto;
     font-family: 'Kumbh Sans', sans-serif;
     background: linear-gradient(var(--bg-soft-violet),var(--bg-soft-blue));
 
@@ -31,13 +32,12 @@ html body{
 }
 
 main{
-    /* min-height: 30rem;
-    height:100%; */
+
     min-width: 20rem;
     position: relative;
-    /* margin-top:auto; */
     width: min(30rem, 80%);
     margin-top: 10rem;
+    
     
 }
 
@@ -49,8 +49,8 @@ section{
 }
 
 
+
 picture img{
-  
     top:-6.9rem;
     position: absolute;
     margin-left: auto;
@@ -58,8 +58,6 @@ picture img{
     left: 0;
     right: 0;
     width: 15rem;
-    filter: drop-shadow(0rem 2rem 0px rgba(170, 170, 226, 0.2));
-    
 }
 
 h1{
@@ -74,11 +72,21 @@ p{
 }
 
 a{
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
+    cursor: pointer;
     
 }
+
+a:hover{
+    color: var(--txt-Soft-red);
+}
+
+.active{
+    font-weight: bold;
+}
+
 
 .qna-block{
     display: flex;
@@ -86,9 +94,23 @@ a{
     justify-content: space-around;
     text-align: left;
     border-bottom: 1px solid var(--div-light-grayish-blue);
+    margin-top: 1rem;
+    padding-bottom:1rem;
+    max-height: 1rem;
+    transition: max-height 250ms ease-out;
+}
+
+.qna-block img{
+    width: .8rem;
+    height: .5rem;
+    align-self: center;
+    
 
 }
 
+.box{
+    display: none;
+}
 .question{
     flex: 1 0 80%;
 
@@ -96,15 +118,15 @@ a{
 
 
 
-.qna-block img{
-    width: .8rem;
-    height: .5rem;
-    align-self: center;
 
+
+.img-bg{
+    position: absolute;
+    top: .5rem;
 }
 
 .answer{
-    flex: 0 0 80%;
+    flex: 0 0 80%;   
 }
 
 footer{
@@ -112,19 +134,80 @@ footer{
     margin-bottom: auto;
 }
 
-.invisible{ 
-    display: none;
-}
-
-#p1:target{
+.visible{ 
     display: block;
-
 }
 
-#p2:target{
-    display: block;
-
+.expanded{
+    transform: rotate(180deg);
 }
+
+
+.anim-height-trans{
+    max-height: 5rem;
+    
+}
+
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 768px){
+    main{
+        position: relative;
+        width: min(50rem, 80%);
+
+        
+    }
+
+    section{
+        padding: 3rem 5rem 3rem 25rem;
+        
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    picture img{
+        
+        position: absolute;
+        margin-top: 7%;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        margin-left: -5rem;
+        min-width: 25rem;
+    }
+
+   
+    .box{
+        display:block;
+        position: absolute;
+        margin-top: 12rem;
+        min-width: 8rem;
+        width: 8rem;
+        left: -5.5rem;
+        z-index: 1;
+    }
+
+    .img-bg{
+        
+  
+        transform: scale(2);
+        top: -6rem;
+        left: -13rem;
+ 
+    }
+
+    .container{
+        overflow:hidden;
+        position: relative;
+    }
+
+
+ 
+}
