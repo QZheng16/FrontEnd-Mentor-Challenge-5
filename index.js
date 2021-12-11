@@ -24,6 +24,8 @@ function toggleAnswer(qList, aList, imgList, qnaList){
                 {
                     setTimeout(() => qnaList[i].classList.remove("anim-height-trans"), 150 );
                     setTimeout(() => aList[i].classList.remove("visible"), 300 );
+
+                    
                     
 
                 }
